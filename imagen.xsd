@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/imagen" xmlns:img="http://www.example.org/imagen"
+	xmlns:art="http://www.example.org/articulo" elementFormDefault="qualified">
+
+	<xsd:import schemaLocation="articulo.xsd" namespace="http://www.example.org/articulo" />
+
+	<xsd:complexType name="tipoImagen">
+		<xsd:sequence>
+			<xsd:element name="datos" type="img:tipoDatos" />
+		</xsd:sequence>
+		<xsd:attribute name="identificador" type="art:tipoIdentificador"
+			use="required" />
+	</xsd:complexType>
+
+
+	<xsd:complexType name="tipoDatos">
+		<xsd:sequence>
+			<xsd:element name="dimensiones" type="img:tipoDimensiones" />
+			<xsd:element name="pie" type="xsd:string" />
+			<xsd:element name="contenido" type="img:foto">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:notation name="jpeg" public="image/jpeg" />
+	<xsd:notation name="gif" public="image/gif" />
+
+	<xsd:simpleType name="imageType">
+		<xsd:restriction base="xsd:NOTATION">
+			<xsd:enumeration value="img:gif" />
+			<xsd:enumeration value="img:jpeg" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="foto">
+		<xsd:attribute name="formato" type="img:imageType" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoDimensiones">
+		<xsd:sequence>
+			<xsd:element name="ancho" type="xsd:integer" />
+			<xsd:element name="alto" type="xsd:integer" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:attribute name="NewAttribute" type="xsd:string"></xsd:attribute>
+
+</xsd:schema>

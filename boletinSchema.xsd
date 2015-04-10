@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/boletin" xmlns:bol="http://www.example.org/boletin"
+	xmlns:art="http://www.example.org/articulo" xmlns:img="http://www.example.org/imagen"
+	xmlns:proy="http://www.example.org/proyecto" xmlns:tema="http://www.example.org/tema"
+	xmlns:exp="http://www.example.org/experimento" elementFormDefault="qualified">
+
+	<xsd:import schemaLocation="articulo.xsd" namespace="http://www.example.org/articulo" />
+	<xsd:import schemaLocation="tema.xsd" namespace="http://www.example.org/tema" />
+	<xsd:import schemaLocation="imagen.xsd" namespace="http://www.example.org/imagen" />
+	<xsd:import schemaLocation="experimento.xsd"
+		namespace="http://www.example.org/experimento" />
+	<xsd:import schemaLocation="proyecto.xsd" namespace="http://www.example.org/proyecto" />
+
+
+	<xsd:element name="superrecopilatorio" type="bol:tipoRecopilatorio" />
+
+	<xsd:complexType name="tipoRecopilatorio">
+		<xsd:sequence>
+			<xsd:element name="recopilatorio" type="bol:tipoSuper"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoSuper">
+		<xsd:sequence>
+			<xsd:element name="consulta" type="bol:tipoConsulta" />
+			<xsd:element name="tema" type="tema:tipoTema" minOccurs="1"
+				maxOccurs="unbounded" />
+			<xsd:element name="articulo" type="art:tipoArticulo"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xsd:element name="imagen" type="img:tipoImagen"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="experimento" type="exp:experimento"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="proyecto" type="proy:tipoObjetoProyecto"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoConsulta">
+		<xsd:sequence>
+			<xsd:element name="lenguajeConsulta" type="bol:tipoLenConsulta" />
+			<xsd:element name="textoConsulta" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="tipoLenConsulta">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="natural" />
+			<xsd:enumeration value="SQL" />
+			<xsd:enumeration value="SPARQL" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

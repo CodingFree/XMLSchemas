@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/experimento" xmlns:tns="http://www.example.org/experimento"
+	xmlns:art="http://www.example.org/articulo" xmlns:lugar="http://www.example.org/lugar"
+	elementFormDefault="qualified">
+
+	<xsd:import schemaLocation="lugar.xsd"
+		namespace="http://www.example.org/lugar" />
+	<xsd:import schemaLocation="articulo.xsd" namespace="http://www.example.org/articulo" />
+
+	<xsd:complexType name="experimento">
+		<xsd:sequence>
+			<xsd:element name="descripcion" type="xsd:string" />
+			<xsd:element name="lugar" type="lugar:tipoLugar" />
+		</xsd:sequence>
+		<xsd:attribute name="identificador" type="art:tipoIdentificador"
+			use="required" />
+	</xsd:complexType>
+</xsd:schema>

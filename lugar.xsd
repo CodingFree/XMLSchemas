@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/lugar" 
+xmlns:tns="http://www.example.org/lugar" 
+elementFormDefault="qualified">
+
+	<xsd:complexType name="tipoLugar">
+		<xsd:sequence>
+			<xsd:element name="pais" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ciudad" minOccurs="0" maxOccurs="1"/>
+			<xsd:choice>
+				<xsd:element name="W3Cgeo" type="tns:tipoW3Cgeo" />
+				<xsd:element name="kml" type="tns:tipoKml" />
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="tipoKml">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d\.{0,1}\d*\s\d+\.{0,1}\d*" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="tipoW3Cgeo">
+		<xsd:sequence>
+			<xsd:element name="lat" type="xsd:decimal" />
+			<xsd:element name="long" type="xsd:decimal" />		
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

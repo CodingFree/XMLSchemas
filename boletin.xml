@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<superrecopilatorio xmlns:art="http://www.example.org/articulo"
+	xmlns="http://www.example.org/boletin" xmlns:img="http://www.example.org/imagen"
+	xmlns:proy="http://www.example.org/proyecto" xmlns:tema="http://www.example.org/tema"
+	xmlns:exp="http://www.example.org/experimento" xmlns:lug="http://www.example.org/lugar"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/boletin boletinSchema.xsd ">
+
+
+	<recopilatorio>
+		<consulta>
+			<lenguajeConsulta>natural</lenguajeConsulta>
+			<textoConsulta>Demostraciones de teoría de conjuntos de álgebra</textoConsulta>
+		</consulta>
+		<tema identificador="a120102">
+			<tema:clasificacion>
+				<tema:campo>
+					<tema:nombre>Matemáticas</tema:nombre>
+					<tema:codigo>12</tema:codigo>
+				</tema:campo>
+				<tema:disciplina>
+					<tema:nombre>Álgebra</tema:nombre>
+					<tema:codigo>1201</tema:codigo>
+				</tema:disciplina>
+				<tema:subdisciplina>
+					<tema:nombre>Teoría Axiomática de Conjuntos</tema:nombre>
+					<tema:codigo>120102</tema:codigo>
+				</tema:subdisciplina>
+			</tema:clasificacion>
+		</tema>
+		<tema identificador="abcA223">
+			<tema:clasificacion>
+				<tema:campo>
+					<tema:nombre>Matemáticas</tema:nombre>
+					<tema:codigo>12</tema:codigo>
+				</tema:campo>
+				<tema:disciplina>
+					<tema:nombre>Álgebra</tema:nombre>
+					<tema:codigo>1201</tema:codigo>
+				</tema:disciplina>
+				<tema:subdisciplina>
+					<tema:nombre>Geometría Algebraica</tema:nombre>
+					<tema:codigo>120101</tema:codigo>
+				</tema:subdisciplina>
+			</tema:clasificacion>
+		</tema>
+		<articulo tema="abcA223">
+			<art:fecha>2013-12-11</art:fecha>
+			<!-- Lista de strings: http://www.w3schools.com/schema/el_list.asp -->
+			<art:clasificador>paper resultado</art:clasificador>
+			<art:informacion>
+				<art:issn>0219-4988</art:issn>
+			</art:informacion>
+			<art:titulo>Upper central series for elementary-abelian-over-cyclic
+				regular wreath product p-groups
+			</art:titulo>
+			<art:autores>
+				<art:autor>
+					<art:nombre>Jeffrey M. Riedl</art:nombre>
+					<art:correo>werisovije@flurred.com</art:correo>
+					<art:url>http://flurred.com</art:url>
+				</art:autor>
+			</art:autores>
+			<art:semantica>
+				We compute the
+				<art:clave>upper central</art:clave>
+				<art:clave>series</art:clave>
+				for the regular wreath...
+			</art:semantica>
+			<art:lenguaje>en</art:lenguaje>
+
+			<art:texto>We compute the upper central series for the regular wreath
+				product finite group C ≀ E where C is a cyclic p-group and E is an
+				elementary abelian p-group for some prime p. The notion of a pattern
+				subgroup enables us to describe the upper central series in a
+				natural way.
+			</art:texto>
+		</articulo>
+		<articulo tema="abcA223">
+			<art:fecha>2015-05-04</art:fecha>
+			<art:clasificador>paper investigacion</art:clasificador>
+			<art:informacion>
+				<art:issn>0219-4988</art:issn>
+			</art:informacion>
+			<art:titulo>Finite groups with few non-normal subgroups</art:titulo>
+			<art:autores>
+				<art:autor>
+					<art:nombre>Jiakuan Lu</art:nombre>
+					<art:correo>saxan@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+				<art:autor>
+					<art:nombre>Linna Pang</art:nombre>
+					<art:correo>washou@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+				<art:autor>
+					<art:nombre>Linna Pang</art:nombre>
+					<art:correo>xinniah@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+			</art:autores>
+			<art:semantica>
+				For a
+				<art:clave>finite group</art:clave>
+				G, let v(G) denote the number of
+				<art:clave>conjugacy</art:clave>
+				classes...
+			</art:semantica>
+			<art:lenguaje>en</art:lenguaje>
+			<art:texto>
+				For a
+				<art:b>finite group G</art:b>
+				, let v(G) denote the number of conjugacy classes of all non-normal
+				subgroups of G, and let π(G) denote the set of primes dividing the
+				order of G. In this note, we shall classify the finite groups G with
+				v(G) ≤ |π(G)|.
+			</art:texto>
+		</articulo>
+		<articulo tema="abcA223">
+			<art:fecha>2014-10-20</art:fecha>
+			<art:clasificador>ponencia resultado</art:clasificador>
+			<art:informacion>
+				<art:issn>0219-4988</art:issn>
+			</art:informacion>
+			<art:titulo>Finite groups with cyclic S-cofactors of subgroups
+			</art:titulo>
+			<art:autores>
+				<art:autor>
+					<art:nombre>Xiaolan Yi</art:nombre>
+					<art:correo>bawikifod@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+			</art:autores>
+			<art:semantica>
+				Let H be a
+				<art:clave>subgroup</art:clave>
+				of a
+				<art:clave>finite group</art:clave>
+				G. We use HsG to denote...
+			</art:semantica>
+			<art:lenguaje>en</art:lenguaje>
+			<art:texto>
+				Let H be a subgroup of a
+				<art:b>finite group G</art:b>
+				. We use HsG to denote the S-core of H,
+				that is, the subgroup of G
+				generated by all those subgroups of H
+				which are S-permutable in G
+				. We
+				say that H/HsG is the S-cofactor of H. In
+				this paper we study G
+				under
+				restrictions on the S-cofactors of some
+				subgroups of G.
+			</art:texto>
+		</articulo>
+		<imagen identificador="abcA223">
+			<img:datos>
+				<img:dimensiones>
+					<img:ancho>200</img:ancho>
+					<img:alto>200</img:alto>
+				</img:dimensiones>
+				<img:pie>Subroup of a finite group.</img:pie>
+				<img:contenido formato="img:jpeg"></img:contenido>
+			</img:datos>
+		</imagen>
+		<imagen identificador="abcA223">
+			<img:datos>
+				<img:dimensiones>
+					<img:ancho>260</img:ancho>
+					<img:alto>260</img:alto>
+				</img:dimensiones>
+				<img:pie>Another subgroup of a finite group.</img:pie>
+				<img:contenido formato="img:gif"></img:contenido>
+			</img:datos>
+		</imagen>
+		<experimento identificador="abcA223">
+			<exp:descripcion>It is a proof of concepts for groups with cyclic
+				S-cofactors of subgroups.</exp:descripcion>
+			<exp:lugar>
+				<lug:pais>China</lug:pais>
+				<lug:ciudad>Shenzhen</lug:ciudad>
+				<lug:W3Cgeo>
+					<lug:lat>39.991893000000000000</lug:lat>
+					<lug:long>116.309954000000060000</lug:long>
+				</lug:W3Cgeo>
+			</exp:lugar>
+		</experimento>
+		<proyecto idProyecto="idvalue1">
+			<proy:tipoProyecto>investigacion</proy:tipoProyecto>
+			<proy:nombreProyecto>Proyecto de Prueba</proy:nombreProyecto>
+			<proy:socios>
+				<proy:socio>Chema Alonso</proy:socio>
+				<proy:socio>Alfonso Muñoz</proy:socio>
+			</proy:socios>
+			<proy:estructura>
+				<proy:organismo>Universidad Politecnica de Madrid</proy:organismo>
+				<proy:numEuropeo>001/2015</proy:numEuropeo>
+				<proy:organizacion numEntregados="0" numPaquetes="4" />
+			</proy:estructura>
+		</proyecto>
+		<proyecto idProyecto="idvalue3">
+			<proy:tipoProyecto>desarrollo</proy:tipoProyecto>
+			<proy:nombreProyecto>Proyecto de Adecuación de Springfield</proy:nombreProyecto>
+			<proy:socios>
+				<proy:socio>Bart Simpson</proy:socio>
+				<proy:socio>Homer Simpson</proy:socio>
+			</proy:socios>
+			<proy:estructura>
+				<proy:organismo>Universidad de Springield</proy:organismo>
+				<proy:numEuropeo>001/2015</proy:numEuropeo>
+				<proy:organizacion numEntregados="0" numPaquetes="4" />
+			</proy:estructura>
+		</proyecto>		
+	</recopilatorio>
+	<recopilatorio>
+		<consulta>
+			<lenguajeConsulta>SQL</lenguajeConsulta>
+			<textoConsulta>ELECT * FROM @Maths WHERE TEXT LIKE '%algebra%'; </textoConsulta>
+		</consulta>
+		<tema identificador="abcA128">
+			<tema:clasificacion>
+				<tema:campo>
+					<tema:nombre>Matemáticas</tema:nombre>
+					<tema:codigo>12</tema:codigo>
+				</tema:campo>
+				<tema:disciplina>
+					<tema:nombre>Álgebra</tema:nombre>
+					<tema:codigo>1201</tema:codigo>
+				</tema:disciplina>
+				<tema:subdisciplina>
+					<tema:nombre>Teoría Axiomática de Conjuntos</tema:nombre>
+					<tema:codigo>120102</tema:codigo>
+				</tema:subdisciplina>
+			</tema:clasificacion>
+		</tema>
+		<tema identificador="abcA129">
+			<tema:clasificacion>
+				<tema:campo>
+					<tema:nombre>Matemáticas</tema:nombre>
+					<tema:codigo>12</tema:codigo>
+				</tema:campo>
+				<tema:disciplina>
+					<tema:nombre>Álgebra</tema:nombre>
+					<tema:codigo>1201</tema:codigo>
+				</tema:disciplina>
+				<tema:subdisciplina>
+					<tema:nombre>Geometría Algebraica</tema:nombre>
+					<tema:codigo>120101</tema:codigo>
+				</tema:subdisciplina>
+			</tema:clasificacion>
+		</tema>
+		<articulo tema="abcA223">
+			<art:fecha>2013-12-11</art:fecha>
+			<!-- Lista de strings: http://www.w3schools.com/schema/el_list.asp -->
+			<art:clasificador>paper resultado</art:clasificador>
+			<art:informacion>
+				<art:issn>0219-4988</art:issn>
+			</art:informacion>
+			<art:titulo>Upper central series for elementary-abelian-over-cyclic
+				regular wreath product p-groups
+			</art:titulo>
+			<art:autores>
+				<art:autor>
+					<art:nombre>Jeffrey M. Riedl</art:nombre>
+					<art:correo>werisovije@flurred.com</art:correo>
+					<art:url>http://flurred.com</art:url>
+				</art:autor>
+			</art:autores>
+			<art:semantica>
+				We compute the
+				<art:clave>upper central</art:clave>
+				<art:clave>series</art:clave>
+				for the regular wreath...
+			</art:semantica>
+			<art:lenguaje>en</art:lenguaje>
+			<art:texto>We compute the upper central series for the regular wreath
+				product finite group C ≀ E where C is a cyclic p-group and E is an
+				elementary abelian p-group for some prime p. The notion of a pattern
+				subgroup enables us to describe the upper central series in a
+				natural way.
+			</art:texto>
+		</articulo>
+		<articulo tema="abcA223">
+			<art:fecha>2015-05-04</art:fecha>
+			<art:clasificador>paper investigacion</art:clasificador>
+			<art:informacion>
+				<art:issn>0219-4988</art:issn>
+			</art:informacion>
+			<art:titulo>Finite groups with few non-normal subgroups</art:titulo>
+			<art:autores>
+				<art:autor>
+					<art:nombre>Jiakuan Lu</art:nombre>
+					<art:correo>saxan@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+				<art:autor>
+					<art:nombre>Linna Pang</art:nombre>
+					<art:correo>washou@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+				<art:autor>
+					<art:nombre>Linna Pang</art:nombre>
+					<art:correo>xinniah@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+			</art:autores>
+			<art:semantica>
+				For a
+				<art:clave>finite group</art:clave>
+				G, let v(G) denote the number of
+				<art:clave>conjugacy</art:clave>
+				classes...
+			</art:semantica>
+			<art:lenguaje>en</art:lenguaje>
+			<art:texto>
+				For a
+				<art:b>finite group G</art:b>
+				, let v(G) denote the number of conjugacy classes of all non-normal
+				subgroups of G, and let π(G) denote the set of primes dividing the
+				order of G. In this note, we shall classify the finite groups G with
+				v(G) ≤ |π(G)|.
+			</art:texto>
+		</articulo>
+		<articulo tema="abcA223">
+			<art:fecha>2014-10-20</art:fecha>
+			<art:clasificador>ponencia resultado</art:clasificador>
+			<art:informacion>
+				<art:issn>0219-4988</art:issn>
+			</art:informacion>
+			<art:titulo>Finite groups with cyclic S-cofactors of subgroups
+			</art:titulo>
+			<art:autores>
+				<art:autor>
+					<art:nombre>Xiaolan Yi</art:nombre>
+					<art:correo>bawikifod@flurred.com</art:correo>
+					<art:url>http://www.flurred.com</art:url>
+				</art:autor>
+			</art:autores>
+			<art:semantica>
+				Let H be a
+				<art:clave>subgroup</art:clave>
+				of a
+				<art:clave>finite group</art:clave>
+				G. We use HsG to denote...
+			</art:semantica>
+			<art:lenguaje>en</art:lenguaje>
+			<art:texto>
+				Let H be a subgroup of a
+				<art:b>finite group G</art:b>
+				. We use HsG to denote the S-core of H,
+				that is, the subgroup of G
+				generated by all those subgroups of H
+				which are S-permutable in G
+				. We
+				say that H/HsG is the S-cofactor of H. In
+				this paper we study G
+				under
+				restrictions on the S-cofactors of some
+				subgroups of G.
+			</art:texto>
+		</articulo>
+		<imagen identificador="abcA223">
+			<img:datos>
+				<img:dimensiones>
+					<img:ancho>200</img:ancho>
+					<img:alto>200</img:alto>
+				</img:dimensiones>
+				<img:pie>Subroup of a finite group.</img:pie>
+				<img:contenido formato="img:gif"></img:contenido>
+			</img:datos>
+		</imagen>
+		<imagen identificador="abcA223">
+			<img:datos>
+				<img:dimensiones>
+					<img:ancho>260</img:ancho>
+					<img:alto>260</img:alto>
+				</img:dimensiones>
+				<img:pie>Another subgroup of a finite group.</img:pie>
+				<img:contenido formato="img:jpeg" />
+			</img:datos>
+		</imagen>
+		<experimento identificador="abcA223">
+			<exp:descripcion>It is a proof of concepts for groups with cyclic
+				S-cofactors of subgroups.</exp:descripcion>
+			<exp:lugar>
+				<lug:pais>China</lug:pais>
+				<lug:ciudad>Shenzhen</lug:ciudad>
+				<lug:W3Cgeo>
+					<lug:lat>39.991893000000000000</lug:lat>
+					<lug:long>116.309954000000060000</lug:long>
+				</lug:W3Cgeo>
+			</exp:lugar>
+		</experimento>
+		<proyecto idProyecto="idvalue2">
+			<proy:tipoProyecto>investigacion</proy:tipoProyecto>
+			<proy:nombreProyecto>Proyecto de Prueba Segundo</proy:nombreProyecto>
+			<proy:socios>
+				<proy:socio>Chema Alonso</proy:socio>
+			</proy:socios>
+			<proy:estructura>
+				<proy:organismo>Universidad Politecnica de Madrid</proy:organismo>
+				<proy:organizacion numEntregados="0" numPaquetes="4" />
+			</proy:estructura>
+		</proyecto>
+	</recopilatorio>
+</superrecopilatorio>

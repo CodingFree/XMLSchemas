@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/articulo" xmlns:art="http://www.example.org/articulo"
+	xmlns:tema="http://www.example.org/tema" xmlns:img="http://www.example.org/imagen"
+	xmlns:exp="http://www.example.org/experimento" xmlns:proy="http://www.example.org/proyecto"
+	elementFormDefault="qualified">
+
+	<xsd:import schemaLocation="tema.xsd" namespace="http://www.example.org/tema" />
+	<xsd:import schemaLocation="imagen.xsd" namespace="http://www.example.org/imagen" />
+	<xsd:import schemaLocation="experimento.xsd"
+		namespace="http://www.example.org/experimento" />
+	<xsd:import schemaLocation="proyecto.xsd" namespace="http://www.example.org/proyecto" />
+
+	<xsd:simpleType name="tipoIdentificador">
+		<xsd:restriction base="xsd:IDREF">
+			<xsd:pattern value="[a-z]{3}[A-Z]\d{3}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="tipoArticulo">
+		<xsd:sequence>
+			<xsd:element name="fecha">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="\d{4}-\d{1,2}-\d{1,2}" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="clasificador">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="(paper|ponencia)\s(investigacion|resultado)" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="informacion">
+				<xsd:complexType>
+					<xsd:choice>
+						<xsd:element name="isbn" type="art:tipoIsbn" />
+						<xsd:element name="issn" type="art:tipoIssn" />
+					</xsd:choice>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="titulo" type="xsd:string" />
+			<xsd:element name="autores" type="art:tipoAutores" />
+			<xsd:element name="semantica" type="art:tipoSemantica" />
+			<xsd:element name="lenguaje" type="art:lenguajeW3C" />
+			<xsd:element name="texto" type="art:tipoTexto" />
+			<xsd:element name="experimento" type="exp:experimento"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="imagen" type="img:tipoImagen"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="tema" type="art:tipoIdentificador"
+			use="required" />
+		<xsd:attribute name="idProyecto" type="xsd:IDREF" />
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoTexto" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="b" minOccurs="0" maxOccurs="unbounded"
+				type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoAutores">
+		<xsd:choice minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="autor" type="art:tipoAutor" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoAutor">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string" />
+			<xsd:element name="correo" type="art:tipoEmail" />
+			<xsd:element name="url" type="art:tipoUrl" minOccurs="0"
+				maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="tipoUrl">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="(http\:\/\/)?(www\.)?.*" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="tipoEmail">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="(\w+\.?)*@(\w+\.?)*" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="tipoSemantica" mixed="true">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="clave" type="xsd:string" maxOccurs="unbounded" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:simpleType name="tipoIsbn">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{9}[\d|X]" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="tipoIssn">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{4}\-\d{3}(\d|x|X)" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="lenguajeW3C">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[a-zA-Z]{2}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="color" final="restriction">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="green" />
+			<xsd:enumeration value="red" />
+			<xsd:enumeration value="blue" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

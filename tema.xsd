@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/tema" xmlns:tema="http://www.example.org/tema"
+	elementFormDefault="qualified">
+
+	<xsd:complexType name="tipoTema">
+		<xsd:sequence>
+			<xsd:element name="clasificacion" type="tema:tipoCodigoUnesco" />
+		</xsd:sequence>
+		<xsd:attribute name="identificador" type="xsd:ID" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoCodigoUnesco">
+		<xsd:sequence>
+			<xsd:element name="campo" type="tema:tipoCampo" />
+			<xsd:element name="disciplina" type="tema:tipoDisciplina" />
+			<xsd:element name="subdisciplina" type="tema:tipoSubdisciplina" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoCampo">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string" />
+			<xsd:element name="codigo">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:integer">
+						<xsd:pattern value="\d{2}" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoDisciplina">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string" />
+			<xsd:element name="codigo">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:integer">
+						<xsd:pattern value="\d{4}" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tipoSubdisciplina">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string" />
+			<xsd:element name="codigo">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:integer">
+						<xsd:pattern value="\d{6}" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>

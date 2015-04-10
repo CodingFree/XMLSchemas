@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proy:proyecto idProyecto="idvalue0" xmlns:proy="http://www.example.org/proyecto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/proyecto proyecto.xsd ">
+  <proy:tipoProyecto>investigacion</proy:tipoProyecto>
+  <proy:nombreProyecto>proy:nombreProyecto</proy:nombreProyecto>
+  <proy:socios>proy:socios</proy:socios>
+  <proy:estructura>
+    <proy:organismo>proy:organismo</proy:organismo>
+    <proy:numEuropeo>proy:numEuropeo</proy:numEuropeo>
+    <proy:organizacion numEntregados="0" numPaquetes="0"/>
+  </proy:estructura>
+</proy:proyecto>

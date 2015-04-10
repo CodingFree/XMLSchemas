@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/proyecto" xmlns:proy="http://www.example.org/proyecto"
+	elementFormDefault="qualified">
+
+	<xsd:complexType name="tipoObjetoProyecto">
+		<xsd:sequence>
+			<xsd:element name="tipoProyecto" type="proy:tipoProyecto" />
+			<xsd:element name="nombreProyecto" type="xsd:string" />
+			<xsd:element name="socios">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="socio" type="xsd:string" minOccurs="1" maxOccurs="20" ></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="estructura" type="proy:tipoEstructura" />
+		</xsd:sequence>
+		<xsd:attribute name="idProyecto" type="xsd:ID" />
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="tipoProyecto">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="investigacion" />
+			<xsd:enumeration value="desarrollo" />
+			<xsd:enumeration value="innovacion" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="tipoEstructura">
+		<xsd:sequence>
+			<xsd:element name="organismo" type="xsd:string" />
+			<xsd:element name="numEuropeo" type="proy:tipoNumEuropeo" minOccurs="0" />
+			<xsd:element name="organizacion">
+				<xsd:complexType>
+					<xsd:attribute name="numPaquetes" type="proy:tipoNumPaquetes" />
+					<xsd:attribute name="numEntregados" type="xsd:int" />
+					<xsd:anyAttribute />
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="tipoNumPaquetes">
+		<xsd:restriction base="xsd:int">
+			<xsd:minInclusive value="3" />
+			<xsd:maxInclusive value="10" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="tipoNumEuropeo">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{3}\/\d{4}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+</xsd:schema>
